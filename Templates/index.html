@@ -17,38 +17,45 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-10">
+{#                <div class="panel panel-default">#}
+{#                  <div class="panel-heading">#}
+{#                   <a href="#" style="font-size: 14px">运维专区</a>#}
+{#                      <span class="pull-right">管理员：Yongli Zhu</span>#}
+{#                  </div>#}
+{#                  <div class="panel-body">#}
+{#                    运维讨论区#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="panel panel-default">#}
+{#                  <div class="panel-heading">#}
+{#                   <a href="#" style="font-size: 14px">Django专区</a>#}
+{#                      <span class="pull-right">管理员：Yongli Zhu</span>#}
+{#                  </div>#}
+{#                  <div class="panel-body">#}
+{#                    Django学习讨论区#}
+{#                  </div>#}
+{#                </div>#}
+{#                <div class="panel panel-default">#}
+{#                  <div class="panel-heading">#}
+{#                   <a href="#" style="font-size: 14px">部落建设</a>#}
+{#                      <span class="pull-right">管理员：Yongli Zhu</span>#}
+{#                  </div>#}
+{#                  <div class="panel-body">#}
+{#                    关于部落建设...#}
+{#                  </div>#}
+{#                </div>#}
+                {%  for b in blocks %}
                 <div class="panel panel-default">
                   <div class="panel-heading">
-                   <a href="#" style="font-size: 14px">运维专区</a>
-                      <span class="pull-right">管理员：Yongli Zhu</span>
+                   <a href="#" style="font-size: 14px">{{ b.name }}</a>
+                      <span class="pull-right">{{ b.manager }}</span>
                   </div>
                   <div class="panel-body">
-                    运维讨论区
+                    {{ b.desc }}
                   </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                   <a href="#" style="font-size: 14px">Django专区</a>
-                      <span class="pull-right">管理员：Yongli Zhu</span>
-                  </div>
-                  <div class="panel-body">
-                    Django学习讨论区
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                   <a href="#" style="font-size: 14px">部落建设</a>
-                      <span class="pull-right">管理员：Yongli Zhu</span>
-                  </div>
-                  <div class="panel-body">
-                    关于部落建设...
-                  </div>
-                </div>
+                {% endfor %}
             </div>
-{#                运维专区#}
-{#                <button type="button" class="btn btn-success">提交</button>#}
-{#            </div>#}
-{#            <div class="col-xs-12 col-md-8">Django专区</div>#}
             <div class="col-xs-12 col-md-2">
                 <div class="well">
                     匿名用户， 请
