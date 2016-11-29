@@ -15,12 +15,14 @@ Including another URLconf
 """
 import django
 import django.contrib.staticfiles.views
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.contrib import admin
 
 import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'article/', include('article.url')),
     url(r'^$', views.index),
     #url(r'^static/(?P<path>,*)$', django.contrib.staticfiles.views.serve),
     # 在Django1.10中，总的urls.py中处理静态文件的配置：

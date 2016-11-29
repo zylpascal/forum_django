@@ -7,12 +7,11 @@
 from django.shortcuts import render
 from block.models import Block
 
-# def index(request):
-#      return render(request,"index.html")
-
 # block_infos is a queryset object
 # id is default added by django
-block_infos = Block.objects.all().order_by("-id")
+#block_infos = Block.objects.all().order_by("-id")
+block_infos = Block.objects.all().filter(status=0).order_by("-id")
+# wehn views changes, need manually restart server
 
 def index(request):
     # block_infos = [{"name": "运维专区", "desc": "运维学习讨论区", "manager": "admin"},
