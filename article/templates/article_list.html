@@ -24,7 +24,7 @@
        </div>
         <div class="row">
            <div class="col-xs-12 col-md-12">
-            <a href="#" class="btn btn-primary">发表文章</a>
+            <a href="/article/list/{{ b.id }}/creat" class="btn btn-primary">发表文章</a>
             <br />
             <br />
            </div>
@@ -71,28 +71,6 @@
             </li>
           </ul>
         </nav>
-
-{#        <div class="row">#}
-{#            <div class="col-xs-12 col-md-10">#}
-{#                {%  for b in blocks %}#}
-{#                <div class="panel panel-default">#}
-{#                  <div class="panel-heading">#}
-{#                   <a href="/article/list/{{ b.id }}" style="font-size: 14px">{{ b.name }}</a>#}
-{#                      <span class="pull-right">{{ b.manager_name }}</span>#}
-{#                  </div>#}
-{#                  <div class="panel-body">#}
-{#                    {{ b.desc }}#}
-{#                  </div>#}
-{#                </div>#}
-{#                {% endfor %}#}
-{#            </div>#}
-{#            <div class="col-xs-12 col-md-2">#}
-{#                <div class="well">#}
-{#                    匿名用户， 请#}
-{#                    <a href="#">登陆</a>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
     </div>
 </body>
 </html>
